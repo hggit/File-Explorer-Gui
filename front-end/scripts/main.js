@@ -1,8 +1,8 @@
-function operate(operator) {
-	var num1 = document.querySelector('#num-1').value;
-	var num2 = document.querySelector('#num-2').value;
-	resultLambda = operator(num1, num2);
-	resultLambda(result => {
-		document.querySelector('#output').innerText = result;
-	});
-}
+async function pick_file() {
+            let folder = document.getElementById('input-box').value;
+            let file_div = document.getElementById('file-name');
+            
+            // Call into Python so we can access the file system
+            let random_filename = await eel.pick_file(folder)();
+            file_div.innerHTML = random_filename;
+        }

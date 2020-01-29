@@ -13,13 +13,11 @@
 
 </head>
 
-<body>
+<body onload='pick_file()'>
 
-    <input type="text" id="num-1" placeholder="Enter number.">
-    <input type="text" id="num-2" placeholder="Enter number.">
-    <input type="button" class="submit" value="Add" onclick="operate(eel.add)">
-    <input type="button" class="submit" value="Subtract" onclick="operate(eel.subtract)">
-    <span id="output"></span>
+    <input id='input-box' placeholder='Type folder here' value=''></input>
+    <a href='javascript:void()' onclick='pick_file()'>Get Files List</a>
+    <div id='file-name'>---</div>
 </body>
 
 </html>
